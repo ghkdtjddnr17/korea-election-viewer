@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 45 920;
+  font-display: swap;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2") format("woff2-variations");
+}
+
+:root {
+  /* Page surfaces (stone tone, matches design mock D) */
+  --background: #f5f5f4;
+  --paper: #ffffff;
+  --paper-soft: #fafaf9;
+
+  /* Ink */
+  --foreground: #18181b;
+  --muted: #71717a;
+  --muted-strong: #52525b;
+
+  /* Lines */
+  --border: #e7e5e4;
+  --border-strong: #d6d3d1;
+
+  /* Truth-status palette (6) — bg / text / border */
+  --truth-red-bg:    #fef2f2;  --truth-red-text:    #b91c1c;  --truth-red-border:    #fecaca;
+  --truth-yellow-bg: #fefce8;  --truth-yellow-text: #a16207;  --truth-yellow-border: #fde68a;
+  --truth-orange-bg: #fff7ed;  --truth-orange-text: #c2410c;  --truth-orange-border: #fed7aa;
+  --truth-black-bg:  #f4f4f5;  --truth-black-text:  #27272a;  --truth-black-border:  #d4d4d8;
+  --truth-white-bg:  #fafafa;  --truth-white-text:  #52525b;  --truth-white-border:  #e4e4e7;
+  --truth-blue-bg:   #eff6ff;  --truth-blue-text:   #1d4ed8;  --truth-blue-border:   #bfdbfe;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.03);
+  --shadow-pop: 0 10px 25px -10px rgb(0 0 0 / 0.15), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+
+  /* Comparison bar (Compare × Mark design language) — neutral ink, color stays on marks */
+  --bar-track: #e4e4e0;
+  --bar-fill: #2a2a2e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-paper: var(--paper);
+  --color-paper-soft: var(--paper-soft);
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, sans-serif;
+  --font-mono: "Spline Sans Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --shadow-card: var(--shadow-card);
+  --shadow-pop: var(--shadow-pop);
+}
+
+/* Truth chip utilities — used as <span class="truth-chip truth-red">사실확인 1</span> */
+.truth-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.truth-red    { background: var(--truth-red-bg);    color: var(--truth-red-text);    border-color: var(--truth-red-border); }
+.truth-yellow { background: var(--truth-yellow-bg); color: var(--truth-yellow-text); border-color: var(--truth-yellow-border); }
+.truth-orange { background: var(--truth-orange-bg); color: var(--truth-orange-text); border-color: var(--truth-orange-border); }
+.truth-black  { background: var(--truth-black-bg);  color: var(--truth-black-text);  border-color: var(--truth-black-border); }
+.truth-white  { background: var(--truth-white-bg);  color: var(--truth-white-text);  border-color: var(--truth-white-border); }
+.truth-blue   { background: var(--truth-blue-bg);   color: var(--truth-blue-text);   border-color: var(--truth-blue-border); }
+
+/* Keycap (used inside Cmd+K trigger / shortcut hints) */
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--muted);
+}
+
+/* Card surface */
+.surface-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Compare × Mark design language ────────────────────────────────── */
+
+/* Tabular monospace figures (재산·전과·기호 등 수치) */
+.num { font-family: var(--font-mono); font-feature-settings: "tnum" 1; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+
+/* Comparison bar — neutral ink fill on a faint track. Color stays on marks. */
+.cmp-bar { height: 6px; background: var(--bar-track); position: relative; overflow: hidden; }
+.cmp-bar > span { position: absolute; inset: 0 auto 0 0; background: var(--bar-fill); }
+
+/* Identity mark — a clean party-color rounded tile carrying the ballot numeral.
+   Used as the avatar everywhere a candidate appears (photo falls back to this).
+   Number ink is set inline (contrast-aware); the inset hairline defines light tiles. */
+.id-mark { position: relative; overflow: hidden; display: grid; place-items: center; flex-shrink: 0; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.07); }
+.id-mark > .num { font-weight: 800; line-height: 1; letter-spacing: -0.04em; font-family: var(--font-sans); font-variant-numeric: tabular-nums; }
+/* Official portraits are tall head-shoulders shots — anchor to the top so the face
+   survives the square crop instead of being centered (which clips the head). */
+.id-mark > img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cmp-bar > span { animation: none !important; }
+}
+
+html, body {
+  font-family: var(--font-sans);
+  font-weight: 450;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 17.5px;
+  line-height: 1.7;
+  letter-spacing: -0.005em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.inline-link {
+  color: #18181b;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  transition: border-color 120ms ease;
+}
+a.inline-link:hover { border-bottom-color: rgba(0,0,0,0.7); }
+
+/* Article body styles for rendered markdown */
+.article-prose {
+  line-height: 1.75;
+  color: #27272a;
+  /* Korean: wrap whole words at spaces (not mid-syllable); still break long URLs. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.article-prose h1,
+.article-prose h2,
+.article-prose h3,
+.article-prose h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+  line-height: 1.3;
+}
+.article-prose h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+.article-prose h3 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+.article-prose h4 { font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #404040; }
+.article-prose p { margin: 0.85em 0; }
+.article-prose ul, .article-prose ol { margin: 0.85em 0; padding-left: 1.4rem; }
+.article-prose ul { list-style: disc; }
+.article-prose ol { list-style: decimal; }
+.article-prose li { margin: 0.3em 0; }
+.article-prose li > ul, .article-prose li > ol { margin: 0.25em 0; }
+.article-prose strong { font-weight: 700; color: #0a0a0a; }
+
+/* Policy section ordered lists (§7 분야별, §8 선관위 5대공약, §10 심층분석 등):
+   ─ keep more breathing room between items so the section reads as a sequence of
+     standalone policy briefs rather than one wall of text.
+   ─ promote the first <strong> (the policy title) into a heading-like block. */
+.article-prose ol > li {
+  margin: 1.1em 0;
+  padding-left: 0.25rem;
+  line-height: 1.7;
+}
+.article-prose ol > li > strong:first-child {
+  font-size: 1.05em;
+  color: #0a0a0a;
+}
+/* The label chips injected by preprocessPolicyLabels — `**(목표)**`, `**(방법)**`, `**(재원)**`.
+   Render as inline-block with a soft muted background so they read as labels, not just bold. */
+.article-prose ol > li strong:not(:first-child) {
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  background: #f4f4f5;
+  color: #52525b;
+  padding: 1px 7px;
+  border-radius: 4px;
+  margin-right: 0.4em;
+  letter-spacing: 0.01em;
+}
+.article-prose blockquote {
+  border-left: 3px solid #d4d4d8;
+  padding: 0.5rem 1rem;
+  color: #52525b;
+  margin: 1rem 0;
+  background: #fafafa;
+  font-size: 0.97em;
+}
+.article-prose code {
+  background: #f4f4f5;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.article-prose pre {
+  background: #18181b;
+  color: #fafafa;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  margin: 1rem 0;
+}
+.article-prose pre code { background: transparent; padding: 0; color: inherit; }
+.article-prose table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2rem 0;
+  font-size: 0.96em;
+  /* Korean text wraps mid-word by default — keep-all forces wrap only at spaces. */
+  word-break: keep-all;
+  table-layout: auto;
+}
+.article-prose thead {
+  background: #f4f4f5;
+}
+.article-prose th, .article-prose td {
+  border: 1px solid #e5e5e5;
+  padding: 0.55rem 0.75rem;
+  vertical-align: top;
+  text-align: left;
+  word-break: keep-all;
+}
+.article-prose th { font-weight: 700; color: #0a0a0a; white-space: nowrap; }
+/* First column (key column) stays on one line — it's the row label, not the data. */
+.article-prose td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #27272a;
+  background: #fafafa;
+}
+.article-prose tbody tr:nth-child(even) { background: #fafafa; }
+.article-prose tbody tr:nth-child(even) td:first-child { background: #f4f4f5; }
+.article-prose a {
+  color: #0a0a0a;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  transition: border-color 120ms ease;
+}
+.article-prose a:hover { border-bottom-color: rgba(0,0,0,0.85); }
+.article-prose hr { border: 0; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
+.article-prose img { max-width: 100%; height: auto; border-radius: 4px; margin: 1rem 0; }
+.article-prose details {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.75rem 0;
+  background: #fafafa;
+}
+.article-prose summary { cursor: pointer; font-weight: 600; }
+
+/* Scroll-margin so sticky nav anchor jumps don't bury heading */
+.article-prose h2[id], .article-prose h3[id] {
+  scroll-margin-top: 96px;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 16.5px; line-height: 1.65; }
+  .article-prose h2 { font-size: 1.3rem; margin-top: 1.85rem; }
+  .article-prose h3 { font-size: 1.1rem; margin-top: 1.4rem; }
+  .article-prose h4 { margin-top: 1.2rem; }
+  /* Denser tables so they breathe within a phone's width. */
+  .article-prose table { font-size: 0.88em; }
+  .article-prose th, .article-prose td { padding: 0.4rem 0.55rem; }
+  .article-prose blockquote { padding: 0.5rem 0.8rem; }
+}

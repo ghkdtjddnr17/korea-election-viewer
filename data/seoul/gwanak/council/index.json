@@ -1,0 +1,455 @@
+{
+  "office": "관악구의원",
+  "electionDate": "2026-06-03",
+  "lastModified": "2026-05-28T07:29:46.978Z",
+  "primarySource": "중앙선거관리위원회 선거통계시스템 (info.nec.go.kr, 구·시·군의회의원선거)",
+  "rosterRaw": "# 🏛️ 관악구의원 후보 (제9회 전국동시지방선거 / 지역구)\n\n> 선거일: 2026년 6월 3일(수)\n> 최종 업데이트: 2026-05-28 (Phase 1: 인덱스만 / 거주 선거구 깊이는 Phase 2 예정)\n> **1차 출처**: 중앙선관위 공식 후보자 명부 (info.nec.go.kr, `setElectionCode(6)`)",
+  "districts": [
+    {
+      "name": "가선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "ballotMark": "1-가",
+          "name": "임춘수",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "가선거구",
+          "href": "/seoul/gwanak/council/가/01",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "1-나",
+          "name": "박용규",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "가선거구",
+          "href": "/seoul/gwanak/council/가/02",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 3,
+          "ballotMark": "2",
+          "name": "김금희",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "가선거구",
+          "href": "/seoul/gwanak/council/가/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 4,
+          "ballotMark": "5",
+          "name": "박준민",
+          "party": "자유와혁신",
+          "partyColor": "#558B2F",
+          "district": "가선거구",
+          "href": "/seoul/gwanak/council/가/04",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "나선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "name": "노광자",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "나선거구",
+          "href": "/seoul/gwanak/council/나/01",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "1-나",
+          "name": "표태룡",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "나선거구",
+          "href": "/seoul/gwanak/council/나/02",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 3,
+          "ballotMark": "2",
+          "name": "이진복",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "나선거구",
+          "href": "/seoul/gwanak/council/나/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 4,
+          "ballotMark": "3",
+          "name": "왕정순",
+          "party": "조국혁신당",
+          "partyColor": "#06275E",
+          "district": "나선거구",
+          "href": "/seoul/gwanak/council/나/04",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 5,
+          "name": "구자민",
+          "party": "무소속",
+          "partyColor": "#52525B",
+          "district": "나선거구",
+          "href": "/seoul/gwanak/council/나/05",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "not_applicable"
+        }
+      ]
+    },
+    {
+      "name": "다선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "ballotMark": "1-가",
+          "name": "손정혜",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "다선거구",
+          "href": "/seoul/gwanak/council/다/01",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "1-나",
+          "name": "곽광자",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "다선거구",
+          "href": "/seoul/gwanak/council/다/02",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 3,
+          "ballotMark": "1-다",
+          "name": "조홍련",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "다선거구",
+          "href": "/seoul/gwanak/council/다/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 4,
+          "ballotMark": "2-가",
+          "name": "양지후",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "다선거구",
+          "href": "/seoul/gwanak/council/다/04",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 5,
+          "ballotMark": "2-나",
+          "name": "김기성",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "다선거구",
+          "href": "/seoul/gwanak/council/다/05",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 6,
+          "name": "구가환",
+          "party": "무소속",
+          "partyColor": "#52525B",
+          "district": "다선거구",
+          "href": "/seoul/gwanak/council/다/06",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 7,
+          "ballotMark": "5",
+          "name": "김민지",
+          "party": "진보당",
+          "partyColor": "#D6001C",
+          "district": "다선거구",
+          "href": "/seoul/gwanak/council/다/07",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "라선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "ballotMark": "1-가",
+          "name": "양윤정",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "라선거구",
+          "href": "/seoul/gwanak/council/라/01",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "1-나",
+          "name": "정현일",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "라선거구",
+          "href": "/seoul/gwanak/council/라/02",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 3,
+          "ballotMark": "2",
+          "name": "이경관",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "라선거구",
+          "href": "/seoul/gwanak/council/라/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 4,
+          "ballotMark": "4",
+          "name": "박범근",
+          "party": "개혁신당",
+          "partyColor": "#FF7920",
+          "district": "라선거구",
+          "href": "/seoul/gwanak/council/라/04",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 5,
+          "ballotMark": "5",
+          "name": "박명희",
+          "party": "진보당",
+          "partyColor": "#D6001C",
+          "district": "라선거구",
+          "href": "/seoul/gwanak/council/라/05",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 6,
+          "ballotMark": "6",
+          "name": "왕복근",
+          "party": "정의당",
+          "partyColor": "#FFCC00",
+          "district": "라선거구",
+          "href": "/seoul/gwanak/council/라/06",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "마선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "ballotMark": "1-가",
+          "name": "손숙희",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "마선거구",
+          "href": "/seoul/gwanak/council/마/01",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "1-나",
+          "name": "이상옥",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "마선거구",
+          "href": "/seoul/gwanak/council/마/02",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 3,
+          "ballotMark": "2",
+          "name": "백성원",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "마선거구",
+          "href": "/seoul/gwanak/council/마/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 4,
+          "ballotMark": "4",
+          "name": "민영진",
+          "party": "개혁신당",
+          "partyColor": "#FF7920",
+          "district": "마선거구",
+          "href": "/seoul/gwanak/council/마/04",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "바선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "ballotMark": "1-가",
+          "name": "김영미",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "바선거구",
+          "href": "/seoul/gwanak/council/바/01",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "1-나",
+          "name": "안진섭",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "바선거구",
+          "href": "/seoul/gwanak/council/바/02",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 3,
+          "ballotMark": "2",
+          "name": "이원상",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "바선거구",
+          "href": "/seoul/gwanak/council/바/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "사선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "ballotMark": "1-가",
+          "name": "위성경",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "사선거구",
+          "href": "/seoul/gwanak/council/사/01",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "1-나",
+          "name": "김혜정",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "사선거구",
+          "href": "/seoul/gwanak/council/사/02",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 3,
+          "ballotMark": "2-가",
+          "name": "최웅주",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "사선거구",
+          "href": "/seoul/gwanak/council/사/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 4,
+          "ballotMark": "2-나",
+          "name": "이동일",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "사선거구",
+          "href": "/seoul/gwanak/council/사/04",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 5,
+          "ballotMark": "4",
+          "name": "원동철",
+          "party": "개혁신당",
+          "partyColor": "#FF7920",
+          "district": "사선거구",
+          "href": "/seoul/gwanak/council/사/05",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "중앙선관위 후보자 명부",
+      "url": "http://info.nec.go.kr"
+    }
+  ]
+}

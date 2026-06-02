@@ -1,0 +1,148 @@
+{
+  "office": "동작구시의원",
+  "electionDate": "2026-06-03",
+  "lastModified": "2026-05-28T17:44:23.003Z",
+  "primarySource": "중앙선거관리위원회 선거통계시스템 (info.nec.go.kr, 시·도의회의원선거)",
+  "rosterRaw": "# 🏛️ 동작구 시·도의원 (서울시의회 의원) 후보\n\n> 선거일: 2026년 6월 3일(수)\n> 최종 업데이트: 2026-05-29\n> **1차 출처**: 중앙선관위 (info.nec.go.kr, `setElectionCode=5`, townCode=1120)",
+  "districts": [
+    {
+      "name": "제1선거구",
+      "candidates": [
+        {
+          "number": 1,
+          "ballotMark": "1",
+          "name": "김정환",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "제1선거구",
+          "href": "/seoul/dongjak/metro/1/01",
+          "running": true,
+          "criminalCount": 1,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 2,
+          "ballotMark": "2",
+          "name": "장순욱",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "제1선거구",
+          "href": "/seoul/dongjak/metro/1/02",
+          "running": true,
+          "criminalCount": 2,
+          "militaryStatus": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "제2선거구",
+      "candidates": [
+        {
+          "number": 3,
+          "ballotMark": "1",
+          "name": "김경우",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "제2선거구",
+          "href": "/seoul/dongjak/metro/2/03",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 4,
+          "ballotMark": "2",
+          "name": "최민규",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "제2선거구",
+          "href": "/seoul/dongjak/metro/2/04",
+          "running": true,
+          "criminalCount": 1,
+          "militaryStatus": "served"
+        },
+        {
+          "number": 5,
+          "name": "이원순",
+          "party": "무소속",
+          "partyColor": "#52525B",
+          "district": "제2선거구",
+          "href": "/seoul/dongjak/metro/2/05",
+          "running": true,
+          "wealth": "53,243천원 (약 5,324만 원)",
+          "criminalCount": 0,
+          "militaryStatus": "not_applicable"
+        }
+      ]
+    },
+    {
+      "name": "제3선거구",
+      "candidates": [
+        {
+          "number": 6,
+          "ballotMark": "1",
+          "name": "노성철",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "제3선거구",
+          "href": "/seoul/dongjak/metro/3/06",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        },
+        {
+          "number": 7,
+          "ballotMark": "2",
+          "name": "이수연",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "제3선거구",
+          "href": "/seoul/dongjak/metro/3/07",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "제4선거구",
+      "candidates": [
+        {
+          "number": 8,
+          "ballotMark": "1",
+          "name": "유용",
+          "party": "더불어민주당",
+          "partyColor": "#152484",
+          "district": "제4선거구",
+          "href": "/seoul/dongjak/metro/4/08",
+          "running": true,
+          "wealth": "3,164,664천원 (약 31.6억 원)",
+          "criminalCount": 0,
+          "militaryStatus": "served"
+        },
+        {
+          "number": 9,
+          "ballotMark": "2",
+          "name": "이희원",
+          "party": "국민의힘",
+          "partyColor": "#E61E2B",
+          "district": "제4선거구",
+          "href": "/seoul/dongjak/metro/4/09",
+          "running": true,
+          "criminalCount": 0,
+          "militaryStatus": "unknown"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "중앙선관위",
+      "url": "http://info.nec.go.kr"
+    },
+    {
+      "label": "12대 서울시의회 정수",
+      "url": "https://www.newspim.com/news/view/20260424000606"
+    }
+  ]
+}
