@@ -110,7 +110,7 @@ export default function TypedCandidateDetail({
       <WealthRank me={c} siblings={siblings} />
 
       <div className="mt-9 flex flex-col lg:flex-row gap-8">
-        <aside className="lg:w-56 lg:flex-shrink-0">
+        <aside className="lg:w-56 lg:shrink-0">
           <SectionNav sections={navSections} />
         </aside>
         <article className="flex-1 min-w-0 max-w-3xl">
@@ -120,7 +120,7 @@ export default function TypedCandidateDetail({
             return (
               <section key={i} id={id} className="mb-12">
                 <div className="flex items-baseline gap-3 mb-4 border-b-2 border-foreground pb-2">
-                  {s.no != null && <span className="num text-[11px] uppercase tracking-wider font-bold text-muted">§{s.no}</span>}
+                  {s.no != null && <span className="num text-[11px] uppercase tracking-wider font-bold text-muted">{s.no}</span>}
                   <h2 className="text-2xl font-black tracking-tight leading-tight">{s.title}</h2>
                 </div>
                 {isPledges ? (

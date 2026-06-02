@@ -27,7 +27,7 @@ export default function DistrictView({
       id: "matrix",
       label: "비교 매트릭스",
       content: (
-        <div className="bg-paper border border-[color:var(--border)] p-6 rounded-sm">
+        <div className="bg-paper border border-border p-6 rounded-sm">
           <Markdown source={district.matrix.raw} />
         </div>
       ),
@@ -38,7 +38,7 @@ export default function DistrictView({
       id: "index",
       label: "원본 인덱스",
       content: (
-        <div className="bg-paper border border-[color:var(--border)] p-6 rounded-sm">
+        <div className="bg-paper border border-border p-6 rounded-sm">
           <Markdown source={district.index.raw} />
         </div>
       ),
@@ -49,7 +49,7 @@ export default function DistrictView({
       id: `extra-${ex.filename}`,
       label: ex.filename.replace(/\.md$/, ""),
       content: (
-        <div className="bg-paper border border-[color:var(--border)] p-6 rounded-sm">
+        <div className="bg-paper border border-border p-6 rounded-sm">
           <Markdown source={ex.raw} />
         </div>
       ),
@@ -58,7 +58,7 @@ export default function DistrictView({
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-8">
-      <nav className="text-xs text-[color:var(--muted)] mb-4 flex flex-wrap items-center gap-1.5">
+      <nav className="text-xs text-muted mb-4 flex flex-wrap items-center gap-1.5">
         {breadcrumbs.map((b, i) => (
           <span key={i} className="inline-flex items-center gap-1.5">
             {b.href ? (
@@ -70,14 +70,14 @@ export default function DistrictView({
           </span>
         ))}
       </nav>
-      <header className="mb-8 pb-6 border-b border-[color:var(--border)]">
-        <div className="text-[11px] uppercase tracking-[0.2em] text-[color:var(--muted)] font-semibold mb-1">
+      <header className="mb-8 pb-6 border-b border-border">
+        <div className="text-[11px] uppercase tracking-[0.2em] text-muted font-semibold mb-1">
           선거구
         </div>
         <h1 className="text-3xl md:text-4xl font-black tracking-tight">
           {district.name}
         </h1>
-        <div className="mt-2 text-sm text-[color:var(--muted)]">
+        <div className="mt-2 text-sm text-muted">
           후보 {district.candidates.length}명
         </div>
       </header>

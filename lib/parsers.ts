@@ -197,18 +197,18 @@ function makeSection(heading: string, body: string): Section {
   if (numMatch) {
     return {
       no: parseInt(numMatch[1], 10),
-      marker: numMatch[0].split(/\s+/)[0],
+      marker: numMatch[1],
       heading,
       title: numMatch[2].trim(),
       body,
     };
   }
-  // §1, §2 with no period
+  // "§1", "§2" form with no trailing period
   const symMatch = headingText.match(/^§(\d+)\s*\.?\s*(.*)$/);
   if (symMatch) {
     return {
       no: parseInt(symMatch[1], 10),
-      marker: `§${symMatch[1]}`,
+      marker: symMatch[1],
       heading,
       title: (symMatch[2] || "").trim() || headingText,
       body,

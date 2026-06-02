@@ -21,7 +21,7 @@ export default function OfficeTabs({
     <div>
       <div
         role="tablist"
-        className="flex flex-wrap gap-0 border-b border-[color:var(--border)] mb-6"
+        className="flex flex-wrap gap-0 border-b border-border mb-6"
       >
         {tabs.map((t) => {
           const isActive = active === t.id;
@@ -35,7 +35,7 @@ export default function OfficeTabs({
               className={`px-4 py-2.5 -mb-px text-sm font-medium transition-colors ${
                 isActive
                   ? "border-b-2 border-foreground text-foreground"
-                  : "border-b-2 border-transparent text-[color:var(--muted)] hover:text-foreground"
+                  : "border-b-2 border-transparent text-muted hover:text-foreground"
               }`}
             >
               {t.label}

@@ -35,7 +35,7 @@ export default function SectionNav({ sections }: { sections: Section[] }) {
   return (
     <>
       <nav className="hidden lg:block sticky top-6 max-h-[calc(100vh-3rem)] overflow-y-auto w-56 pr-4 text-sm">
-        <div className="text-[11px] uppercase tracking-wider text-[color:var(--muted)] mb-2 font-semibold">
+        <div className="text-[11px] uppercase tracking-wider text-muted mb-2 font-semibold">
           섹션
         </div>
         <ol className="space-y-0.5">
@@ -49,7 +49,7 @@ export default function SectionNav({ sections }: { sections: Section[] }) {
                   className={`block py-1 pl-3 border-l-2 ${
                     isActive
                       ? "border-foreground text-foreground font-semibold"
-                      : "border-transparent text-[color:var(--muted)] hover:text-foreground hover:border-[color:var(--border)]"
+                      : "border-transparent text-muted hover:text-foreground hover:border-border"
                   }`}
                 >
                   <span className="text-[11px] tabular-nums mr-1">
@@ -63,7 +63,7 @@ export default function SectionNav({ sections }: { sections: Section[] }) {
         </ol>
       </nav>
 
-      <div className="lg:hidden sticky top-[57px] z-20 bg-paper border border-[color:var(--border)] rounded-lg mb-4">
+      <div className="lg:hidden sticky top-[57px] z-20 bg-paper border border-border rounded-lg mb-4">
         <button
           type="button"
           onClick={() => setOpenMobile((v) => !v)}
@@ -82,7 +82,7 @@ export default function SectionNav({ sections }: { sections: Section[] }) {
                   onClick={() => setOpenMobile(false)}
                   className="block py-1.5 text-foreground"
                 >
-                  <span className="text-[11px] tabular-nums mr-2 text-[color:var(--muted)]">
+                  <span className="text-[11px] tabular-nums mr-2 text-muted">
                     {s.marker || s.no || ""}
                   </span>
                   {s.title}

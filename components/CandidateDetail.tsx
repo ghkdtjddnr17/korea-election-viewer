@@ -20,7 +20,7 @@ export default function CandidateDetail({
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
-      <nav className="text-xs text-[color:var(--muted)] mb-4 flex flex-wrap items-center gap-1.5">
+      <nav className="text-xs text-muted mb-4 flex flex-wrap items-center gap-1.5">
         {breadcrumbs.map((b, i) => (
           <span key={i} className="inline-flex items-center gap-1.5">
             {b.href ? (
@@ -35,7 +35,7 @@ export default function CandidateDetail({
         ))}
       </nav>
 
-      <header className="bg-paper border-l-8 border border-[color:var(--border)] p-6 md:p-8 rounded-sm" style={{ borderLeftColor: partyColor.bg }}>
+      <header className="bg-paper border-l-8 border border-border p-6 md:p-8 rounded-sm" style={{ borderLeftColor: partyColor.bg }}>
         <div className="flex flex-col md:flex-row md:items-start gap-6">
           {candidate.header.기호 && (
             <div className="shrink-0">
@@ -58,22 +58,12 @@ export default function CandidateDetail({
             </h1>
             <div className="flex flex-wrap items-center gap-2 mt-2 text-sm">
               {candidate.header.한자 && (
-                <span className="font-mono text-[color:var(--muted)]">
+                <span className="font-mono text-muted">
                   {candidate.header.한자}
                 </span>
               )}
               <PartyChip party={candidate.header.정당} />
-              {candidate.header.부제 && (
-                <span className="text-[color:var(--muted)]">{candidate.header.부제}</span>
-              )}
             </div>
-            {candidate.metaLines.length > 0 && (
-              <ul className="mt-3 text-[13px] text-[color:var(--muted)] space-y-0.5">
-                {candidate.metaLines.slice(0, 4).map((l, i) => (
-                  <li key={i} className="line-clamp-1">{l}</li>
-                ))}
-              </ul>
-            )}
             <div className="mt-4">
               <TruthBadgeSummary summary={candidate.truthSummary} />
             </div>
@@ -84,7 +74,7 @@ export default function CandidateDetail({
       </header>
 
       <div className="mt-8 flex flex-col lg:flex-row gap-8">
-        <aside className="lg:w-56 lg:flex-shrink-0">
+        <aside className="lg:w-56 lg:shrink-0">
           <SectionNav sections={candidate.sections} />
         </aside>
         <article className="flex-1 min-w-0 max-w-3xl">
@@ -92,8 +82,8 @@ export default function CandidateDetail({
             <section key={i} id={sectionId(s, i)} className="mb-12">
               <div className="flex items-baseline gap-3 mb-4 border-b-2 border-foreground pb-2">
                 {(s.marker || s.no) && (
-                  <span className="text-[11px] uppercase tracking-wider font-bold text-[color:var(--muted)] tabular-nums">
-                    {s.marker || `§${s.no}`}
+                  <span className="text-[11px] uppercase tracking-wider font-bold text-muted tabular-nums">
+                    {s.marker || s.no}
                   </span>
                 )}
                 <h2 className="text-2xl font-black tracking-tight leading-tight">
@@ -105,13 +95,13 @@ export default function CandidateDetail({
           ))}
 
           {candidate.sourcesRaw && (
-            <section id="sec-sources" className="mt-16 pt-8 border-t border-[color:var(--border)]">
+            <section id="sec-sources" className="mt-16 pt-8 border-t border-border">
               <h2 className="text-xl font-black tracking-tight mb-4">출처</h2>
               <Markdown source={candidate.sourcesRaw} />
             </section>
           )}
 
-          <footer className="mt-12 pt-6 border-t border-[color:var(--border)] text-xs text-[color:var(--muted)]">
+          <footer className="mt-12 pt-6 border-t border-border text-xs text-muted">
             <div>원본 파일: <code className="font-mono">{candidate.hierarchy.join("/")}/{candidate.filename}</code></div>
             <div>최종 갱신: {new Date(candidate.lastModified).toLocaleString("ko-KR")}</div>
             <div className="mt-2">

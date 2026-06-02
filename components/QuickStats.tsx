@@ -2,6 +2,17 @@ import type { Candidate } from "@/lib/types";
 
 type Stat = { label: string; value: string };
 
+/** Strip inline markdown so a raw table cell renders as clean text (no literal **, links). */
+function cleanInline(s: string): string {
+  return s
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") // [text](url) -> text
+    .replace(/\*\*([^*]+)\*\*/g, "$1") // **bold** -> bold
+    .replace(/[*_`]/g, "") // stray emphasis / code marks
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function extractFromTable(body: string, key: string): string | null {
   const lines = body.split(/\r?\n/);
   for (const line of lines) {
@@ -9,7 +20,7 @@ function extractFromTable(body: string, key: string): string | null {
     const cells = line.split("|").map((c) => c.trim());
     if (cells.length < 3) continue;
     if (cells[1].includes(key) || cells[1].replace(/\s/g, "").includes(key.replace(/\s/g, ""))) {
-      return cells[2] || null;
+      return cleanInline(cells[2] || "") || null;
     }
   }
   return null;
@@ -44,9 +55,9 @@ export default function QuickStats({ candidate }: { candidate: Candidate }) {
       {stats.map((s, i) => (
         <div
           key={i}
-          className="bg-paper border border-[color:var(--border)] rounded-sm p-3"
+          className="bg-paper border border-border rounded-sm p-3"
         >
-          <dt className="text-[11px] uppercase tracking-wider text-[color:var(--muted)] font-semibold">
+          <dt className="text-[11px] uppercase tracking-wider text-muted font-semibold">
             {s.label}
           </dt>
           <dd className="text-sm font-bold tracking-tight mt-1 leading-snug">

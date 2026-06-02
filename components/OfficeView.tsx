@@ -35,7 +35,7 @@ export default function OfficeView({
       id: "matrix",
       label: "비교 매트릭스",
       content: (
-        <div className="bg-paper border border-[color:var(--border)] p-6 rounded-sm">
+        <div className="bg-paper border border-border p-6 rounded-sm">
           <Markdown source={office.matrix!.raw} />
         </div>
       ),
@@ -46,7 +46,7 @@ export default function OfficeView({
       id: "index",
       label: "원본 인덱스",
       content: (
-        <div className="bg-paper border border-[color:var(--border)] p-6 rounded-sm">
+        <div className="bg-paper border border-border p-6 rounded-sm">
           <Markdown source={office.index!.raw} />
         </div>
       ),
@@ -57,7 +57,7 @@ export default function OfficeView({
       id: `extra-${ex.filename}`,
       label: ex.filename.replace(/\.md$/, ""),
       content: (
-        <div className="bg-paper border border-[color:var(--border)] p-6 rounded-sm">
+        <div className="bg-paper border border-border p-6 rounded-sm">
           <Markdown source={ex.raw} />
         </div>
       ),
@@ -66,7 +66,7 @@ export default function OfficeView({
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-8">
-      <nav className="text-xs text-[color:var(--muted)] mb-4 flex flex-wrap items-center gap-1.5">
+      <nav className="text-xs text-muted mb-4 flex flex-wrap items-center gap-1.5">
         {breadcrumbs.map((b, i) => (
           <span key={i} className="inline-flex items-center gap-1.5">
             {b.href ? (
@@ -79,21 +79,21 @@ export default function OfficeView({
         ))}
       </nav>
 
-      <header className="mb-8 pb-6 border-b border-[color:var(--border)]">
-        <div className="text-[11px] uppercase tracking-[0.2em] text-[color:var(--muted)] font-semibold mb-1">
+      <header className="mb-8 pb-6 border-b border-border">
+        <div className="text-[11px] uppercase tracking-[0.2em] text-muted font-semibold mb-1">
           {office.kind}
         </div>
         <h1 className="text-3xl md:text-4xl font-black tracking-tight">
           {office.name}
         </h1>
-        <div className="mt-2 text-sm text-[color:var(--muted)]">
+        <div className="mt-2 text-sm text-muted">
           후보 {office.candidates.length}명
           {office.districts.length > 0 && ` · ${office.districts.length}개 선거구`}
         </div>
       </header>
 
       {tabs.length === 0 ? (
-        <div className="bg-paper border border-[color:var(--border)] p-12 text-center text-[color:var(--muted)] rounded-sm">
+        <div className="bg-paper border border-border p-12 text-center text-muted rounded-sm">
           이 직책의 후보 자료가 아직 등록되지 않았습니다.
         </div>
       ) : (
@@ -120,7 +120,7 @@ function DistrictsView({ districts }: { districts: District[] }) {
         <section key={d.slug}>
           <h2 className="text-xl font-black tracking-tight mb-4">
             <a href={d.href} className="hover:underline">{d.name}</a>
-            <span className="ml-2 text-xs font-normal text-[color:var(--muted)]">
+            <span className="ml-2 text-xs font-normal text-muted">
               후보 {d.candidates.length}명
             </span>
           </h2>

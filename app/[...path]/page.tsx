@@ -258,11 +258,11 @@ function DocPage({ doc, title }: { doc: { raw: string; filename: string } | null
   if (!doc) notFound();
   return (
     <div className="mx-auto max-w-3xl px-6 py-10">
-      <nav className="text-xs text-[color:var(--muted)] mb-4">
+      <nav className="text-xs text-muted mb-4">
         <Link href="/" className="hover:text-foreground">홈</Link>
       </nav>
       <h1 className="text-3xl font-black tracking-tight mb-2">{title}</h1>
-      <div className="text-xs text-[color:var(--muted)] mb-8">{doc.filename}</div>
+      <div className="text-xs text-muted mb-8">{doc.filename}</div>
       <Markdown source={doc.raw} />
     </div>
   );
