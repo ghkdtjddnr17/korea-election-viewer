@@ -12,7 +12,8 @@
     "build:typed": "tsx scripts/build-typed.ts",
     "build:photos": "tsx scripts/fetch-photos.ts",
     "build:nec-photos": "tsx scripts/fetch-nec-photos.ts",
-    "build": "ELECTION_REGIONS=서울특별시,인천광역시,경기도 pnpm build:data && pnpm build:typed && next build",
+    "build": "next build",
+    "build:full": "ELECTION_REGIONS=서울특별시,인천광역시,경기도 pnpm build:data && pnpm build:typed && next build",
     "start": "next start",
     "lint": "eslint"
   },
