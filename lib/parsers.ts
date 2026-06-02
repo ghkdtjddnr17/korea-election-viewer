@@ -89,7 +89,9 @@ export function parseCandidateHeader(line: string): CandidateHeader {
   //   "경기도의원 비례대표 — 더불어민주당 (기호 1)"
   // Only fills fields the positional parse left empty, so existing patterns are untouched.
   if (!result.기호) {
-    const m = raw.match(/기호\s*(\d+)/);
+    // "기호 N" → "N번"(비례 일부) → main 선행 숫자("07 …", "19-…")
+    const m =
+      raw.match(/기호\s*(\d+)/) || raw.match(/(\d+)\s*번/) || main.match(/^0*(\d+)\b/);
     if (m) result.기호 = m[1];
   }
   if (!result.정당) {
@@ -110,9 +112,9 @@ export function parseCandidateHeader(line: string): CandidateHeader {
       }
     }
   }
-  // 비례 party files sometimes lead with the office label ("경기도의원 비례대표 — 정당");
-  // the party is the real identity there, so prefer it as the display name.
-  if (result.정당 && /비례/.test(result.이름)) {
+  // 비례 party files: the name may be an office label ("…비례대표"), a bare number ("19"),
+  // or "NN party" — the party is the real identity, so prefer it as the display name.
+  if (result.정당 && (/비례/.test(result.이름) || /^\s*\d/.test(result.이름))) {
     result.이름 = result.정당;
   }
 
